@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,15 +19,43 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Class_Routine_Manager"
         tools:targetApi="31">
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
+
+        <activity android:name=".SplashActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+        <activity android:name=".MainActivity" android:exported="false" />
+        <activity android:name=".LoginActivity" android:exported="false" />
+        <activity android:name=".RegisterActivity" android:exported="false" />
+        <activity android:name=".AddClassActivity" android:exported="false" />
+        <activity android:name=".SmartSchedulerActivity" android:exported="false" />
+        <activity android:name=".AttendanceMainActivity" android:exported="false" />
+        <activity android:name=".AddAttendanceCourseActivity" android:exported="false" />
+        <activity android:name=".AttendanceCalculatorActivity" android:exported="false" />
+        <activity android:name=".TeacherNoticeActivity" android:exported="false" />
+        <activity android:name=".NotificationActivity" android:exported="false" />
+        <activity android:name=".SetLiveAlertActivity" android:exported="false" />
+        <activity android:name=".HolidayActivity" android:exported="false" />
+        <activity android:name=".WeeklyRoutineActivity" android:exported="false" />
+        <activity android:name=".ProfileActivity" android:exported="false" />
+
+        <service android:name=".MyForegroundService" android:foregroundServiceType="dataSync" android:exported="false" />
+
+        <provider
+            android:name=".RoutineContentProvider"
+            android:authorities="com.example.class_routine_manager.provider"
+            android:exported="false" />
+
+        <receiver android:name=".SystemEventReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.AIRPLANE_MODE_CHANGED" />
+                <action android:name="android.os.action.POWER_SAVE_MODE_CHANGED" />
+                <action android:name="android.intent.action.TORCH_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
 </manifest>
