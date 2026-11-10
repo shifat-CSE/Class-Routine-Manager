@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "914162061276",
+    "project_id": "classroutinemanager-a41e2",
+    "storage_bucket": "classroutinemanager-a41e2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914162061276:android:f31db7516525fab5478919",
+        "android_client_info": {
+          "package_name": "com.example.class_routine_manager"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCm1AQjKzcZSL7VIzAzwlRjkGxbRoachGs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
