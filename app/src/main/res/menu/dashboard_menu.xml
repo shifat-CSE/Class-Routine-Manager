@@ -1,4 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+    <item
+        android:id="@+id/action_profile"
+        android:title="My Profile" />
+    <item
+        android:id="@+id/action_notification"
+        android:title="Notifications" />
+    <item
+        android:id="@+id/action_api"
+        android:title="Holiday API" />
+    <item
+        android:id="@+id/action_service"
+        android:title="Start Sync Service" />
+    <item
+        android:id="@+id/action_provider"
+        android:title="Read Content Provider" />
+    <item
+        android:id="@+id/action_live_alert"
+        android:title="Set Live Alert" />
+    <item
+        android:id="@+id/action_notice"
+        android:title="Send Notice" />
+    <item
+        android:id="@+id/action_logout"
+        android:title="Logout" />
 </menu>
